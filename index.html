@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Index</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding-top: 20px;
+        }
+
+        h1 {
+            color: #002659;
+            text-align: center;
+        }
+
+        ul {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #f0f0f0;
+        }
+
+        input[type='text'] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Escribe el ID por ejm: MCOCHON <br> y luego le haces click</h1>
+        <input type="text" id="searchInput" onkeyup="searchNames()" placeholder="Buscar por tu nombre...">
+        <ul id="nameList">
+            <li><a href="javascript:void(0);" onclick="window.location.href='AANTONIO@cajaarequipa.pe.html'">AANTONIO@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='ALEYVA@cajaarequipa.pe.html'">ALEYVA@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='CANICAMA@cajaarequipa.pe.html'">CANICAMA@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='DPAREDESM@cajaarequipa.pe.html'">DPAREDESM@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='EHUERTA@cajaarequipa.pe.html'">EHUERTA@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='EPARDO@cajaarequipa.pe.html'">EPARDO@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='FHUAMANGU@cajaarequipa.pe.html'">FHUAMANGU@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='FORE@cajaarequipa.pe.html'">FORE@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='GHERNANDEZ@cajaarequipa.pe.html'">GHERNANDEZ@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='HSERVELLON@cajaarequipa.pe.html'">HSERVELLON@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='JANICAMA@cajaarequipa.pe.html'">JANICAMA@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='JCRUZU@cajaarequipa.pe.html'">JCRUZU@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='JMEZAQ@cajaarequipa.pe.html'">JMEZAQ@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='LALDORADIN@cajaarequipa.pe.html'">LALDORADIN@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='MCOCHON@cajaarequipa.pe.html'">MCOCHON@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='MGALLEGOS@cajaarequipa.pe.html'">MGALLEGOS@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='PLEONO@cajaarequipa.pe.html'">PLEONO@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='SECHEGARAY@cajaarequipa.pe.html'">SECHEGARAY@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='SPEDREROS@cajaarequipa.pe.html'">SPEDREROS@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='WOLEA@cajaarequipa.pe.html'">WOLEA@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='YALLAUCCA@cajaarequipa.pe.html'">YALLAUCCA@cajaarequipa.pe</a></li>
+            <li><a href="javascript:void(0);" onclick="window.location.href='YCONTRERAR@cajaarequipa.pe.html'">YCONTRERAR@cajaarequipa.pe</a></li>
+        </ul>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        function searchNames() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("nameList");
+            li = ul.getElementsByTagName('li');
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
